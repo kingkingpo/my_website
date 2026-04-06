@@ -7,7 +7,7 @@ import { ArrowRight, ExternalLink, Code, RefreshCw, Package } from 'lucide-react
 
 export default function ProjectDetail() {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -22,11 +22,11 @@ export default function ProjectDetail() {
             End-to-end development of a scalable fullstack application replacing manual processes with an automated digital platform.
           </p>
         </div>
-        
+
         <div className="relative w-full aspect-[21/9] rounded-xl overflow-hidden editorial-shadow bg-surface-container">
-          <img 
-            className="w-full h-full object-cover" 
-            src="https://picsum.photos/seed/dashboard/1920/820" 
+          <img
+            className="w-full h-full object-cover"
+            src="https://picsum.photos/seed/dashboard/1920/820"
             alt="B2B Wholesale Platform Dashboard"
             referrerPolicy="no-referrer"
           />
@@ -59,7 +59,7 @@ export default function ProjectDetail() {
                   Seamless integration via QuickBooks API ensured that all sales and stock adjustments are reflected in financial reports instantly.
                 </p>
               </div>
-              
+
               <div className="bg-surface-container-lowest p-8 rounded-xl editorial-shadow">
                 <div className="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-6 text-primary">
                   <Package className="w-6 h-6" />
@@ -76,9 +76,9 @@ export default function ProjectDetail() {
             <h2 className="font-headline text-3xl font-bold mb-8 text-on-surface">Process & Evolution</h2>
             <div className="bg-surface-container-low rounded-xl p-6 md:p-12">
               <div className="aspect-video rounded-lg overflow-hidden mb-8 shadow-sm">
-                <img 
-                  className="w-full h-full object-cover" 
-                  src="https://picsum.photos/seed/process/1200/675" 
+                <img
+                  className="w-full h-full object-cover"
+                  src="https://picsum.photos/seed/process/1200/675"
                   alt="Process and Evolution"
                   referrerPolicy="no-referrer"
                 />
@@ -108,7 +108,6 @@ export default function ProjectDetail() {
               {[
                 { label: 'Client', value: 'Wholesale Partners' },
                 { label: 'Role', value: 'Fullstack Developer' },
-                { label: 'Duration', value: '6 Months' }
               ].map(detail => (
                 <li key={detail.label} className="flex justify-between border-b border-on-surface/5 pb-2">
                   <span className="text-on-surface-variant font-label text-xs">{detail.label}</span>
