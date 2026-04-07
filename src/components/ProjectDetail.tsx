@@ -94,7 +94,7 @@ export default function ProjectDetail() {
           <div className="bg-surface-container-low p-8 rounded-xl">
             <h3 className="font-label text-xs uppercase tracking-widest text-primary font-bold mb-6">Stack & Tools</h3>
             <div className="flex flex-wrap gap-2">
-              {['React (TS)', 'Strapi V5', 'QuickBooks API', 'Webhooks', 'Tailwind CSS'].map(tool => (
+              {['React (TS)', 'Strapi V5', 'QuickBooks API', 'Webhooks', 'Python'].map(tool => (
                 <span key={tool} className="px-3 py-1.5 bg-surface-container-lowest rounded-full font-label text-[10px] text-on-surface-variant border border-on-surface/5">
                   {tool}
                 </span>

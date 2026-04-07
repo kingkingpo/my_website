@@ -75,7 +75,7 @@ export default function AboutContact() {
                 <Sparkles className="w-5 h-5 text-primary" /> Technical Stack
               </h3>
               <div className="flex flex-wrap gap-2">
-                {['Java', 'React', 'Spring Boot', 'Strapi', 'JavaFX', 'Angular2'].map(tech => (
+                {['Java', 'React', 'Next.js', 'Spring Boot', 'Strapi', 'JavaFX', 'Angular2'].map(tech => (
                   <span key={tech} className="px-3 py-1.5 bg-surface-container-low rounded-lg font-label text-xs font-medium text-primary">
                     {tech}
                   </span>
