@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, MouseEvent } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Terminal, Sparkles } from 'lucide-react';
@@ -19,6 +19,13 @@ export default function AboutContact() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [location]);
+
+  const handleEmailClick = (e: MouseEvent) => {
+    e.preventDefault();
+    const user = 'kingkingpo';
+    const domain = 'gmail.com';
+    window.location.href = `mailto:${user}@${domain}`;
+  };
 
   return (
     <motion.div
@@ -99,26 +106,19 @@ export default function AboutContact() {
             I'm open to discussing new opportunities, technical collaborations, or system architecture inquiries. Reach out to start a conversation.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="flex flex-col items-center gap-4 group">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <button
+              onClick={handleEmailClick}
+              className="flex flex-col items-center gap-4 group cursor-pointer bg-transparent border-none appearance-none w-full"
+            >
               <div className="w-14 h-14 rounded-2xl bg-surface-container-lowest flex items-center justify-center shadow-sm group-hover:bg-primary transition-all duration-300 group-hover:scale-110">
                 <Mail className="w-6 h-6 group-hover:text-white transition-colors" />
               </div>
               <div>
                 <p className="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1 text-center">Email</p>
-                <a href="mailto:kingkingpo@gmail.com" className="text-base font-bold hover:text-primary transition-colors">kingkingpo@gmail.com</a>
+                <p className="text-base font-bold group-hover:text-primary transition-colors underline decoration-primary/30 decoration-2 underline-offset-4">Send an Email</p>
               </div>
-            </div>
-
-            <div className="flex flex-col items-center gap-4 group">
-              <div className="w-14 h-14 rounded-2xl bg-surface-container-lowest flex items-center justify-center shadow-sm group-hover:bg-primary transition-all duration-300 group-hover:scale-110">
-                <Phone className="w-6 h-6 group-hover:text-white transition-colors" />
-              </div>
-              <div>
-                <p className="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1 text-center">Phone</p>
-                <p className="text-base font-bold">514-402-8724</p>
-              </div>
-            </div>
+            </button>
 
             <div className="flex flex-col items-center gap-4 group">
               <div className="w-14 h-14 rounded-2xl bg-surface-container-lowest flex items-center justify-center shadow-sm group-hover:bg-primary transition-all duration-300 group-hover:scale-110">
